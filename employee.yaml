@@ -1,0 +1,110 @@
+apiVersion: digital-employee/v1
+kind: DigitalEmployee
+metadata:
+  id: de_indie_launch_day_commander
+  name: 发布日冲刺指挥官
+  alias: Product Hunt Launch
+  repo: de-indie-launch-day-commander
+  card_no: 4.4.2
+  group: indie
+  group_label: 独立开发者
+  phase: P0
+  complexity: S-M
+  score: 21
+  price: ¥99-199/月 或 ¥99/次
+  channels:
+  - GitHub
+  - 小红书
+  - 闲鱼
+  - Coze扣子商店
+  license: Proprietary
+  version: 1.0.0
+spec:
+  positioning: 把"一次性高压发布"变成清单化流程的发布周总指挥
+  users: 即将上线新产品/大版本的全体独立开发者与出海小团队
+  boundary: 做：素材包生成、多平台文案、发布日历、当日评论监控与回复建议、战报复盘；不做：代刷票/虚假评论、承诺榜单名次
+  kpi: 发布素材包齐备提前 ≥48h；发布日评论响应时长 ≤30 分钟；PH/即刻等平台发布日 upvote/互动达成率
+  roi_summary: 单次发布省 15h+ ≈ ¥1200 vs ¥99/次，回报比 >12 倍
+  demand_refs:
+  - D28
+  demand_support: 中等
+  demand_evidence: 低-中｜支撑单一但场景具体（一年数次高压场景）
+runtime:
+  system_prompt: persona/system-prompt.md
+  boundary: persona/boundary.md
+  kpi: persona/kpi.md
+deliverables:
+  skills:
+  - slug: faq-pregenerate
+    name: FAQ 预生成
+    kind: private
+    path: skills/faq-pregenerate
+    version: 1.0.0
+    maturity: implemented
+  - slug: hero-image-sellingpoint
+    name: 首图卖点提炼
+    kind: private
+    path: skills/hero-image-sellingpoint
+    version: 1.0.0
+    maturity: contract-complete
+  - slug: producthunt-copy-writer
+    name: PH 文案撰写
+    kind: private
+    path: skills/producthunt-copy-writer
+    version: 1.0.0
+    maturity: contract-complete
+  workflows:
+  - slug: wf-indie-launch-material-pack
+    name: 发布素材包生成
+    path: workflows/wf-indie-launch-material-pack
+    version: 1.0.0
+    phase: P0
+    calls:
+    - producthunt-copy-writer
+    - hero-image-sellingpoint
+    - faq-pregenerate
+  - slug: wf-indie-launch-copy-adapt
+    name: 多平台文案适配
+    path: workflows/wf-indie-launch-copy-adapt
+    version: 1.0.0
+    phase: P0
+    calls:
+    - platform-format-adapter
+    - multilingual-writing
+  - slug: wf-indie-launch-calendar
+    name: 发布日历排期
+    path: workflows/wf-indie-launch-calendar
+    version: 1.0.0
+    phase: P0
+    calls:
+    - scheduled-dispatch
+  - slug: wf-indie-launch-comment-monitor
+    name: 当日评论监控与回复建议
+    path: workflows/wf-indie-launch-comment-monitor
+    version: 1.0.0
+    phase: P1
+    calls:
+    - review-sentiment-tag
+    - reply-copy-generator
+  - slug: wf-indie-launch-battle-report
+    name: 战报复盘
+    path: workflows/wf-indie-launch-battle-report
+    version: 1.0.0
+    phase: P1
+    calls:
+    - review-sentiment-tag
+    - brief-generator
+  knowledge_base: kb/
+  connectors: connectors/bindings.yaml
+external_dependencies:
+- repo: agent-skills-core
+  version: 1.0.0
+  skills:
+  - brief-generator
+  - multilingual-writing
+  - platform-format-adapter
+  - reply-copy-generator
+  - review-sentiment-tag
+  - scheduled-dispatch
+  resolution: external
+spec_only_dependencies: []
