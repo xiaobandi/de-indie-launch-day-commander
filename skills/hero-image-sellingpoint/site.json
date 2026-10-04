@@ -1,0 +1,15 @@
+{
+  "name": "hero-image-sellingpoint",
+  "title": "首图卖点提炼",
+  "kind": "skill",
+  "owner": "de-indie-launch-day-commander",
+  "complexity": "S",
+  "phase": "P0",
+  "one_liner": "提炼 3-5 个视觉卖点及 GIF 脚本建议（功能列表 → 卖点清单）",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

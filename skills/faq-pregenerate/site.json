@@ -1,0 +1,15 @@
+{
+  "name": "faq-pregenerate",
+  "title": "FAQ 预生成",
+  "kind": "skill",
+  "owner": "de-indie-launch-day-commander",
+  "complexity": "S",
+  "phase": "P0",
+  "one_liner": "预演发布日高频质疑并生成应答（产品说明 → FAQ 库）",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

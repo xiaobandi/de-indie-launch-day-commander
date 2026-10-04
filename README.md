@@ -7,6 +7,19 @@
 
 ![架构](docs/images/architecture.svg)
 
+## 效果（真实执行）
+
+![真实效果](workflows/wf-indie-launch-calendar/docs/images/00-effect.png)
+
+*上图为**真实效果对比**，不是示意图：左栏是输入材料与要求，右栏是该次执行的产出原文，
+两栏取自同一次真实执行记录。*
+
+- 完整台账：[`reports/real-run/wf-indie-launch-calendar.md`](reports/real-run/wf-indie-launch-calendar.md)
+- 录屏与终端回放：[`workflows/wf-indie-launch-calendar/docs/images/`](workflows/wf-indie-launch-calendar/docs/images/)（`08-demo-run.gif` / `08-demo-run.mp4` / `04-terminal-run.png`）
+- 使用示例：[`workflows/wf-indie-launch-calendar/docs/使用示例.md`](workflows/wf-indie-launch-calendar/docs/使用示例.md)
+> 实测判定：**通过**　·　可用度 4/5　·　编造数字 0 处　·　红线命中 7 次 / 拦截 7 次
+
+
 **一句话**：即将上线新产品/大版本的全体独立开发者与出海小团队
 
 ---
@@ -104,7 +117,7 @@ de-indie-launch-day-commander/
 
 | 项 | 值 |
 |---|---|
-| 技能文件数 | 147 |
+| 技能文件数 | 200 |
 | 多场景用例数 | 240 |
 | 用例通过 | 240 |
 | 验收结论 | ✅ 通过 |

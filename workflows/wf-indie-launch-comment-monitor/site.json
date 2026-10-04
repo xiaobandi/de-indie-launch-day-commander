@@ -1,0 +1,15 @@
+{
+  "name": "wf-indie-launch-comment-monitor",
+  "title": "当日评论监控与回复建议",
+  "kind": "workflow",
+  "owner": "de-indie-launch-day-commander",
+  "complexity": "M",
+  "phase": "P1",
+  "one_liner": "抓取新评论 → 情绪识别 → 草拟回复 → 推送人工确认",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

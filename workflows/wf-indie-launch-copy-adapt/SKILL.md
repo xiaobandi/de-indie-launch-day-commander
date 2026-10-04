@@ -1,59 +1,67 @@
 ---
-name: wf-indie-launch-calendar
+name: wf-indie-launch-copy-adapt
 description: >-
-  发布日冲刺指挥官 的「发布日历排期」工作流：各平台发布时点倒排 → 社群动员提醒 → 检查清单。触发方式：人工（T-3 天）。
-  当用户要完成「发布日历排期」这件事、或触发了上述条件时使用。
+  发布日冲刺指挥官 的「多平台文案适配」工作流：按 PH/即刻/V2EX/小红书/X 改写 → 双语切换 → 预览。触发方式：事件（素材确认后）。
+  当用户要完成「多平台文案适配」这件事、或触发了上述条件时使用。
 license: Proprietary
+compatibility: >-
+  需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
+  跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:
   author: PLATFORM
   version: "1.0.0"
   standard: agent-skills/v1
+  library: agent-skills-library
   layer: L2-workflow
   owner: de_indie_launch_day_commander
+  repo: de-indie-launch-day-commander
+  visibility: private_to_employee
+  delivery: employee
   complexity: S
   phase: P0
   source: library
 ---
 
-# 发布日历排期
+# 多平台文案适配
 
-> 归属：**发布日冲刺指挥官**（`de-indie-launch-day-commander`）　触发：人工（T-3 天）　
+> 归属：**发布日冲刺指挥官**（`de-indie-launch-day-commander`）　触发：事件（素材确认后）　
 > 复杂度 S　阶段 P0
 
 ## 一、这条工作流解决什么
 
-各平台发布时点倒排 → 社群动员提醒 → 检查清单
+按 PH/即刻/V2EX/小红书/X 改写 → 双语切换 → 预览
 
-**业务收益**：省 2h/次 ≈ ¥160/次
+**业务收益**：省 3h/次 ≈ ¥240/次
 
 ## 二、调用的 SKILL（必填列，逐条锁定版本）
 
 | 技能名 | slug | 来源仓 | 版本 |
 |---|---|---|---|
-| `定时排期` | `scheduled-dispatch` | core | v1.0.0 |
+| `平台格式适配` | `platform-format-adapter` | core | v1.0.0 |
+| `多语言写作` | `multilingual-writing` | core | v1.0.0 |
 
 > 公共技能来自 `agent-skills-core@1.0.0`，本仓库只做外部依赖引用，
 > **不内联复制**其正文——这是三层仓库体系的硬规则，避免同一能力多份副本各自漂移。
 
 ## 三、执行步骤（每步四要素齐备）
 
-### 步骤 1：各平台发布时点倒排
+### 步骤 1：按 PH/即刻/V2EX/小红书/X 改写
 
-- **做**：各平台发布时点倒排
+- **做**：按 PH/即刻/V2EX/小红书/X 改写
 - **输入来源**：用户提供的原始材料（工作流第 1 步没有「上一步」）/ 本员工知识库 `kb/` / 连接器只读数据；三者皆空时必须停在 G1 闸门
 - **依据与结论**：把本步结论对应到具体输入项
 - **未决 · 待填**：缺数据处写 `<待填>` 并给出获取方式
 
-### 步骤 2：社群动员提醒
+### 步骤 2：双语切换
 
-- **做**：社群动员提醒
+- **做**：双语切换
 - **输入来源**：步骤 1 的产出 / 本员工知识库 `kb/` / 连接器只读数据
 - **依据与结论**：把本步结论对应到具体输入项
 - **未决 · 待填**：缺数据处写 `<待填>` 并给出获取方式
 
-### 步骤 3：检查清单
+### 步骤 3：预览
 
-- **做**：检查清单
+- **做**：预览
 - **输入来源**：步骤 2 的产出 / 本员工知识库 `kb/` / 连接器只读数据
 - **依据与结论**：把本步结论对应到具体输入项
 - **未决 · 待填**：缺数据处写 `<待填>` 并给出获取方式

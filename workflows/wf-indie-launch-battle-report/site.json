@@ -1,0 +1,15 @@
+{
+  "name": "wf-indie-launch-battle-report",
+  "title": "战报复盘",
+  "kind": "workflow",
+  "owner": "de-indie-launch-day-commander",
+  "complexity": "S",
+  "phase": "P1",
+  "one_liner": "各平台数据汇总 → 高光/失误归因 → 复盘报告归档",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}
