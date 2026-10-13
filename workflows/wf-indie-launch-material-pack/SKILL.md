@@ -3,7 +3,7 @@ name: wf-indie-launch-material-pack
 description: >-
   发布日冲刺指挥官 的「发布素材包生成」工作流：产品信息录入 → PH 文案/首图卖点/FAQ 三件套 → 清单校验。触发方式：人工（T-7 天启动）。
   当用户要完成「发布素材包生成」这件事、或触发了上述条件时使用。
-license: Proprietary
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
   跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。

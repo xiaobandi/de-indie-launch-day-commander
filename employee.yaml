@@ -17,7 +17,7 @@ metadata:
   - 小红书
   - 闲鱼
   - Coze扣子商店
-  license: Proprietary
+  license: Apache-2.0
   version: 1.0.0
 spec:
   positioning: 把"一次性高压发布"变成清单化流程的发布周总指挥

@@ -2,7 +2,7 @@
 name: faq-pregenerate
 description: >-
   预演发布日或上线前的高频质疑，提前生成应答库，让首发时不被问倒。当用户提到FAQ生成、常见问题、预演质疑、应答库、faq generation、q&a prep 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: Proprietary
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:
